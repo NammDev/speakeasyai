@@ -1,4 +1,4 @@
-// import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -32,24 +32,24 @@ export default function Header() {
       </div>
       <div className='flex lg:justify-center gap-2 lg:gap-12 lg:items-center'>
         <NavLink href='/#pricing'>Pricing</NavLink>
-        {/* <SignedIn>
+        <SignedIn>
           <NavLink href='/posts'>Your Posts</NavLink>
-        </SignedIn> */}
+        </SignedIn>
       </div>
 
       <div className='flex lg:justify-end lg:flex-1'>
-        {/* <SignedIn>
+        <SignedIn>
           <div className='flex gap-2 items-center'>
             <NavLink href='/dashboard'>Upload a Video</NavLink>
             <UserButton />
           </div>
-        </SignedIn> */}
+        </SignedIn>
 
-        {/* <SignedOut>
-          <SignInButton> */}
-        <NavLink href='/sign-in'>Sign In</NavLink>
-        {/* </SignInButton>
-        </SignedOut> */}
+        <SignedOut>
+          <SignInButton>
+            <NavLink href='/sign-in'>Sign In</NavLink>
+          </SignInButton>
+        </SignedOut>
       </div>
     </nav>
   )
